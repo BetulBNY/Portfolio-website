@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio-website/static/css/main.e6c13ad2.css",
-    "main.js": "/Portfolio-website/static/js/main.41e108f6.js",
+    "main.js": "/Portfolio-website/static/js/main.43be7475.js",
     "static/media/skin_cancer.mp4": "/Portfolio-website/static/media/skin_cancer.c76bd3debfdd433633eb.mp4",
     "static/media/library.jpg": "/Portfolio-website/static/media/library.c3264e9b972965a6fd46.jpg",
     "static/media/roma.jpeg": "/Portfolio-website/static/media/roma.c5cfbfb3e4173297ce8c.jpeg",
@@ -13,10 +13,10 @@
     "static/media/caretta.jpg": "/Portfolio-website/static/media/caretta.c2aa4558c1c0495db4f9.jpg",
     "index.html": "/Portfolio-website/index.html",
     "main.e6c13ad2.css.map": "/Portfolio-website/static/css/main.e6c13ad2.css.map",
-    "main.41e108f6.js.map": "/Portfolio-website/static/js/main.41e108f6.js.map"
+    "main.43be7475.js.map": "/Portfolio-website/static/js/main.43be7475.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.41e108f6.js"
+    "static/js/main.43be7475.js"
   ]
 }
