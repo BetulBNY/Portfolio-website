@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Portfolio-website/static/css/main.e6c13ad2.css",
+    "main.js": "/Portfolio-website/static/js/main.170a9f93.js",
+    "static/media/skin_cancer.mp4": "/Portfolio-website/static/media/skin_cancer.c76bd3debfdd433633eb.mp4",
+    "static/media/library.jpg": "/Portfolio-website/static/media/library.c3264e9b972965a6fd46.jpg",
+    "static/media/roma.jpeg": "/Portfolio-website/static/media/roma.c5cfbfb3e4173297ce8c.jpeg",
+    "static/media/rom.jpg": "/Portfolio-website/static/media/rom.a251a92bb8937848deb3.jpg",
+    "static/media/space_success_rate.jpg": "/Portfolio-website/static/media/space_success_rate.4f2aca33b3511e3e786f.jpg",
+    "static/media/garbage_class.jpg": "/Portfolio-website/static/media/garbage_class.6b032fd27c1bd6d9bdf2.jpg",
+    "static/media/huawei.jpg": "/Portfolio-website/static/media/huawei.56391ac78ff2ca896147.jpg",
+    "static/media/skinPoster.jpg": "/Portfolio-website/static/media/skinPoster.b7e91e982a6b391c1ea9.jpg",
+    "static/media/caretta.jpg": "/Portfolio-website/static/media/caretta.c2aa4558c1c0495db4f9.jpg",
+    "index.html": "/Portfolio-website/index.html",
+    "main.e6c13ad2.css.map": "/Portfolio-website/static/css/main.e6c13ad2.css.map",
+    "main.170a9f93.js.map": "/Portfolio-website/static/js/main.170a9f93.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.170a9f93.js"
+  ]
+}
