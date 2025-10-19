@@ -1,0 +1,11 @@
+# 1. Add changes
+git add .
+
+# 2. Save with Message
+git commit -m "Summary of my changes"
+
+# 3. Push to main branch
+git push origin main
+
+# 4. Deploy to live site
+npm run deploy

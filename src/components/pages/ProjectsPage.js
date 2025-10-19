@@ -1,12 +1,16 @@
 import { useState } from 'react';
-import { Github, ExternalLink, Calendar, Code2, ChevronDown, ChevronUp } from 'lucide-react';
+import { Github, ExternalLink, Calendar, Code2, ChevronDown, ChevronUp,ChevronLeft,ChevronRight } from 'lucide-react';
 import garbageClass from '../../assets/garbage_class.jpg';
 import spaceimg from '../../assets/space_success_rate.jpg';
 import skinVideo from '../../assets/skin_cancer.mp4';
+import kursadUAV from '../../assets/kursadUAV.mp4';
 import skinCancerPoster from '../../assets/skinPoster.jpg';
 import libraryJ from '../../assets/library.jpg';
 import room from '../../assets/rom.jpg';
-
+import dl1 from '../../assets/dl1.jpeg';
+import dl2 from '../../assets/dl2.jpeg';
+import dl3 from '../../assets/dl3.jpeg';
+import kursadpos from '../../assets/kursadpos.jpg';
 export default function ProjectsPage() {
  
   const projects = [
@@ -14,20 +18,21 @@ export default function ProjectsPage() {
       id: 1,
       title: 'Custom Deep Learning Model Development App',
       description: 'A full-stack web application that allows users to design, train, evaluate, and deploy deep learning models through an entirely visual, no-code interface. Users can sign up and manage their own workspaces where they: Build neural network architectures visually, Configure hyperparameters and compile models, Upload datasets for training, Monitor performance metrics during training in real time, Validate models with separate test data, And finally, run predictions directly within the platform. This approach removes the need for programming skills, making it easier for non-technical users to experiment with AI, while still supporting advanced functionality for production-level inference.Implementation: The full-stack application is built around three distinct modules: - C++ Module (Deep Learning Logic): This core module implements deep learning functionality such as layer types, activation functions, loss functions, and more, following object-oriented principles and design patterns. The Crow framework is used for API handling, managing HTML requests, and establishing WebSocket connections with the frontend to transmit epoch results during training. Eigen library is leveraged for efficient vectorization, significantly enhancing performance. - Express.js Module (Authentication & Data Management): The backend is responsible for user authentication and data storage. It follows the MVC pattern, handling requests from the frontend, managing user sessions, and saving user data in a MongoDB database using the Mongoose library. - React.js Module (Frontend/UI): The frontend provides an intuitive, user-friendly interface for interacting with the system. Users can design, train, and test deep learning models seamlessly through the visual interface.',
-      image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
+      image: [dl1,dl2,dl3],
       technologies: ['C++', 'React.js', 'Express.js', 'MongoDB', 'Crow', 'Eigen'],
       githubUrl: 'https://github.com/yourusername/ecommerce-platform',
-      liveUrl: null,
+      liveUrl: "https://deep-learning-framework-view.onrender.com/",
       date: 'Jan 2025 - Present'
     },
     {
       id: 2,
       title: 'UAV Control And Image Recognition',
       description: 'As a member of Aytech UAS – Kürşad 40, I took part in developing the autonomous mission system for the International Rotary Wing UAV Competition at Teknofest. Our team secured 3rd place among 29 finalists with a drone that successfully carried out the following tasks: Surveying the mission area using a downward-facing onboard camera. Identifying a blue hexagon and precisely releasing a red payload at its center. Detecting a red triangle, storing its position when encountered earlier, and later releasing a blue payload at its center. Completing the mission with an autonomous return-to-home and landing sequence. Key Contributions: Built the offboard control architecture using MAVSDK, enabling autonomous flight, payload handling, and mission logic. Developed real-time vision algorithms with OpenCV for accurate recognition of geometric targets (triangle & hexagon). Conducted extensive simulation trials in Gazebo to validate performance before hardware deployment. Deployed the mission software onto a Raspberry Pi connected to the onboard camera, achieving reliable operation in real-world tests.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
+      video:kursadUAV,
+      poster: kursadpos,
       technologies: ['MAVSDK', 'PX4 Autopilot', 'Python', 'OpenCV', 'Gazebo'],
       githubUrl: 'https://github.com/yourusername/task-manager',
-      liveUrl: null,
+      liveUrl: "//youtu.be/p_4mU07smrA?si=JPmKUmkLC0B5Hr3m",
       date: 'March 2025'
     },
     {
@@ -95,6 +100,7 @@ export default function ProjectsPage() {
  
   const ProjectCard = ({ project, index }) => {
     const [isExpanded, setIsExpanded] = useState(false);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const isEven = index % 2 === 0;
     const maxLength = 300;
     const shouldTruncate = project.description.length > maxLength;
@@ -102,6 +108,17 @@ export default function ProjectsPage() {
     const displayDescription = shouldTruncate && !isExpanded 
       ? project.description.slice(0, maxLength) + '...'
       : project.description;
+
+    const isImageArray = Array.isArray(project.image);
+    const imageCount = isImageArray ? project.image.length : 1;
+    
+    const nextImage = () => {
+      setCurrentImageIndex((prev) => (prev + 1) % imageCount);
+    };
+    
+    const prevImage = () => {
+      setCurrentImageIndex((prev) => (prev - 1 + imageCount) % imageCount);
+    };
    
     return (
       <div style={{
@@ -121,11 +138,25 @@ export default function ProjectsPage() {
             />
           ) : (
             <img
-              src={project.image}
+              src={isImageArray ? project.image[currentImageIndex] : project.image}
               alt={project.title}
               style={styles.projectImage}
             />
           )}
+
+
+        {isImageArray && imageCount > 1 && (
+        <>
+          <button onClick={prevImage} style={{ ...styles.imageNavigationButton, ...styles.prevButton }}>
+            <ChevronLeft size={24} />
+          </button>
+          <button onClick={nextImage} style={{ ...styles.imageNavigationButton, ...styles.nextButton }}>
+            <ChevronRight size={24} />
+          </button>
+        </>
+      )}
+
+
           <div style={{...styles.imageOverlay, pointerEvents: "none" }}></div>
         </div>
  
@@ -182,6 +213,8 @@ export default function ProjectsPage() {
               <Github size={20} />
               <span>View Code</span>
             </a>
+
+            {project.liveUrl && (
             <a
               href={project.liveUrl}
               target="_blank"
@@ -190,7 +223,7 @@ export default function ProjectsPage() {
             >
               <ExternalLink size={20} />
               <span>Live Demo</span>
-            </a>
+            </a> )}
           </div>
         </div>
       </div>
@@ -320,6 +353,30 @@ const styles = {
     borderRadius: '16px',
     overflow: 'hidden',
   },
+imageNavigationButton: {
+    position: 'absolute',
+    top: '50%',
+    transform: 'translateY(-50%)',
+    background: 'rgba(0, 0, 0, 0.4)',
+    border: 'none',
+    color: 'white',
+    borderRadius: '50%',
+    width: '40px',
+    height: '40px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    cursor: 'pointer',
+    transition: 'background 0.3s ease',
+  },
+  prevButton: {
+    left: '10px',
+  },
+  nextButton: {
+    right: '10px',
+  },
+
+
   projectImage: {
     width: '100%',
     height: '100%',

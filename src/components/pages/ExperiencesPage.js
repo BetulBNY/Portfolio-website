@@ -1,7 +1,16 @@
-import { Briefcase, Calendar, MapPin, ExternalLink } from 'lucide-react';
+import { useState } from 'react'; 
+import { Briefcase, Calendar, MapPin, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import huawei from '../../assets/huawei.jpg';
 import caretta from '../../assets/caretta.jpg';
 import miuul from '../../assets/miuul.png';
+import wie from '../../assets/wie.jpg';
+import aytech from '../../assets/aytc.jpg';
+import aytech2 from '../../assets/aytech2.jpeg';
+import hepsi1 from '../../assets/hepsi1.jpeg';
+import hepsi2 from '../../assets/hepsi2.jpeg';
+import sff1 from '../../assets/sff1.jpg';
+import sff2 from '../../assets/sff2.jpg';
+import da from '../../assets/da.jpg';
 
 export default function ExperiencesPage() {
  
@@ -27,7 +36,7 @@ export default function ExperiencesPage() {
         startDate: 'October 2023',
         endDate: 'January 2024',
         description: 'During my internship at Caretta Software and Consulting company, we worked on a project about the classification of flower images and displaying similar flowers based on the user-uploaded image. We employed TensorFlow/Keras to implement the VGG-16 CNN architecture with transfer learning and trained the dense layers we appended to the model using the 102 flowers dataset.',
-        images: [caretta], // Tek fotoğraf
+        images: [caretta],
         technologies: ['TensorFlow', 'Keras', 'Python', 'VGG-16', 'Transfer Learning'],
         companyUrl: 'https://www.caretta.net/en/'
       }
@@ -41,9 +50,9 @@ export default function ExperiencesPage() {
         startDate: 'December 2024',
         endDate: 'September 2025',
         description: 'Contributed to the development of the autonomous mission system for a rotary-wing UAV that ranked 3rd among 29 finalist teams at Teknofest. Implemented offboard drone control using MAVSDK to enable autonomous navigation, payload drop, and return-to-home. Developed real-time computer vision algorithms with OpenCV to detect geometric targets (blue hexagon & red triangle) from the onboard camera. Conducted extensive simulation tests in Gazebo and successfully deployed the mission code on a Raspberry Pi with onboard camera for real-world execution. Gained hands-on experience in drone autonomy, perception, and simulation-to-hardware integration within a competitive robotics environment.',
-        images: [huawei,caretta ], // İki fotoğraf - kolaj
+        images: [aytech ], 
         technologies: ['MAVSDK', 'PX4', 'Python', 'OpenCV', 'Gazebo'],
-        companyUrl: 'https://aytech.com.tr/'
+        companyUrl: null
       },
       {
         id: 4,
@@ -53,9 +62,9 @@ export default function ExperiencesPage() {
         startDate: 'December 2022',
         endDate: 'September 2024',
         description: 'As IEEE WIE Chairperson, we organize various engineering training sessions, discussion events, and social activities for our members. Led a team to empower women in engineering through educational workshops and networking events.',
-        images: ['https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80'],
+        images: [wie],
         technologies: ['Leadership', 'Event Management', 'Community Building'],
-        companyUrl: 'https://www.ieee.org/'
+        companyUrl: "https://www.instagram.com/ieeeiauwie?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
       }
     ],
     programs: [
@@ -79,10 +88,7 @@ export default function ExperiencesPage() {
         startDate: 'July 2023',
         endDate: 'August 2023',
         description: "Selected as one of 30 participants from Turkey out of 6,000 applicants for this global program active in 139 countries. Received comprehensive training in 5G, artificial intelligence, and cloud technologies. Collaborated with teams to develop innovative solutions for real-world challenges and earned certification from BTK and Huawei executives.",
-        images: [
-          huawei,
-          'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80'
-        ], // İki fotoğraf - kolaj
+        images: [sff1, sff2], 
         technologies: ['5G', 'AI', 'Cloud Technologies', 'Innovation'],
         companyUrl: 'https://www.huawei.com/tr/news/tr/2023/huawei-turkiye-gelecek-icin-tohumlar-2023-programi-basladi'
       },
@@ -94,7 +100,7 @@ export default function ExperiencesPage() {
         startDate: 'October 2025',
         endDate: 'Present',
         description: "In this ongoing training program, participants explore AI-powered social data analysis through supervised and unsupervised learning models, generative AI tools, and Large Language Models (LLMs). The module focuses on applying modern AI techniques to extract insights from social datasets using real-world case studies.",
-        images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80'],
+        images: [da],
         technologies: ['LLM','GenAI','Data Analysis', 'Statistics', 'Data Visualization','RAG Systems','ML Algorithms'],
         companyUrl: 'https://nsa.marmara.edu.tr/notice/veri-analizi-okulu-basvurulari-basladi'
       }
@@ -108,11 +114,7 @@ export default function ExperiencesPage() {
         startDate: 'December 2024',
         endDate: 'September 2025',
         description: 'Achieved 3rd place among 29 finalist teams in the prestigious Teknofest UAV competition. Developed autonomous navigation system, implemented computer vision for target detection, and successfully completed all mission objectives.',
-        images: [
-          'https://images.unsplash.com/photo-1508614999368-9260051292e5?w=800&q=80',
-          'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800&q=80',
-          'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80'
-        ], // Üç fotoğraf - kolaj
+        images: [aytech2],
         technologies: ['UAV', 'Computer Vision', 'Autonomous Systems'],
         companyUrl: 'https://www.teknofest.org/tr/'
       },
@@ -124,10 +126,7 @@ export default function ExperiencesPage() {
         startDate: 'July 2025',
         endDate: 'August 2025',
         description: "As part of Team GeoSync, we ranked 11th out of 255 teams. During the competition, I contributed to data analysis, preprocessing, and feature engineering for the Kaggle stage. For the final address classification task, we fine-tuned a pre-trained BERT model on a Turkish dataset tailored to our problem. Our team advanced to the finals among the top 12 teams and had the opportunity to present our solution in person at the Hepsiburada Sancaktepe office in front of the jury and other participants.",
-        images: [
-          'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80',
-          'https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&q=80'
-        ], // İki fotoğraf
+        images: [hepsi2, hepsi1 ], // İki fotoğraf
         technologies: ['BERT', 'NLP', 'Machine Learning', 'Python'],
         companyUrl: 'https://kurumsal.hepsiburada.com/tr/'
       }
@@ -135,70 +134,43 @@ export default function ExperiencesPage() {
   };
  
   const ExperienceCard = ({ experience }) => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const imageCount = experience.images.length;
+  
+    const nextImage = () => {
+      setCurrentImageIndex((prev) => (prev + 1) % imageCount);
+    };
+  
+    const prevImage = () => {
+      setCurrentImageIndex((prev) => (prev - 1 + imageCount) % imageCount);
+    };
     
-    return (
+ return (
       <div style={styles.compactCard}>
-        {/* Image Section - Dynamic Layout */}
+        {/* DEĞİŞEN KISIM: Resim bölümü slider olarak yeniden düzenlendi */}
         <div style={styles.compactImageSection}>
-          {imageCount === 1 ? (
-            // Tek fotoğraf - tam genişlik
-            <div style={styles.singleImageContainer}>
-              <img
-                src={experience.images[0]}
-                alt={experience.company}
-                style={styles.experienceImage}
-              />
-              <div style={styles.imageOverlay}></div>
-            </div>
-          ) : imageCount === 2 ? (
-            // İki fotoğraf - yan yana
-            <div style={styles.doubleImageContainer}>
-              <div style={styles.halfImageWrapper}>
-                <img
-                  src={experience.images[0]}
-                  alt={`${experience.company} 1`}
-                  style={styles.experienceImage}
-                />
-                <div style={styles.imageOverlay}></div>
-              </div>
-              <div style={styles.halfImageWrapper}>
-                <img
-                  src={experience.images[1]}
-                  alt={`${experience.company} 2`}
-                  style={styles.experienceImage}
-                />
-                <div style={styles.imageOverlay}></div>
-              </div>
-            </div>
-          ) : (
-            // Üç veya daha fazla fotoğraf - grid layout
-            <div style={styles.multiImageContainer}>
-              <div style={styles.largeImageWrapper}>
-                <img
-                  src={experience.images[0]}
-                  alt={`${experience.company} 1`}
-                  style={styles.experienceImage}
-                />
-                <div style={styles.imageOverlay}></div>
-              </div>
-              <div style={styles.smallImagesWrapper}>
-                {experience.images.slice(1, 3).map((img, index) => (
-                  <div key={index} style={styles.smallImageWrapper}>
-                    <img
-                      src={img}
-                      alt={`${experience.company} ${index + 2}`}
-                      style={styles.experienceImage}
-                    />
-                    <div style={styles.imageOverlay}></div>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <img
+            src={experience.images[currentImageIndex]} // Dinamik olarak doğru resmi göster
+            alt={`${experience.company} - ${currentImageIndex + 1}`}
+            style={styles.experienceImage}
+          />
+          
+          {/* Sadece birden fazla resim varsa navigasyon butonlarını göster */}
+          {imageCount > 1 && (
+            <>
+              <button onClick={prevImage} style={{ ...styles.imageNavigationButton, ...styles.prevButton }}>
+                <ChevronLeft size={20} />
+              </button>
+              <button onClick={nextImage} style={{ ...styles.imageNavigationButton, ...styles.nextButton }}>
+                <ChevronRight size={20} />
+              </button>
+            </>
           )}
+
+          <div style={styles.imageOverlay}></div>
         </div>
- 
-        {/* Content Section */}
+  
+        {/* Content Section - Bu kısım aynı kalıyor */}
         <div style={styles.compactContentSection}>
           <h3 style={styles.compactPosition}>
             {experience.position}
@@ -213,9 +185,9 @@ export default function ExperiencesPage() {
             <span style={styles.compactCompanyName}>
               {experience.company}
             </span>
-            <ExternalLink size={14} />
+            {experience.companyUrl && <ExternalLink size={14} />}
           </a>
- 
+  
           <div style={styles.compactMetaInfo}>
             <div style={styles.compactMetaItem}>
               <Calendar size={14} style={styles.compactMetaIcon} />
@@ -223,17 +195,17 @@ export default function ExperiencesPage() {
                 {experience.startDate} - {experience.endDate}
               </span>
             </div>
- 
+  
             <div style={styles.compactMetaItem}>
               <MapPin size={14} style={styles.compactMetaIcon} />
               <span style={styles.compactMetaText}>{experience.location}</span>
             </div>
           </div>
- 
+  
           <p style={styles.compactDescription}>
             {experience.description}
           </p>
- 
+  
           <div style={styles.compactTechTags}>
             {experience.technologies.map((tech, index) => (
               <span key={index} style={styles.techTag}>
@@ -389,8 +361,31 @@ const styles = {
   },
   compactImageSection: {
     position: 'relative',
-    height: '140px',
+    height: '220px',
     overflow: 'hidden',
+  },
+  imageNavigationButton: {
+    position: 'absolute',
+    top: '50%',
+    transform: 'translateY(-50%)',
+    background: 'rgba(0, 0, 0, 0.4)',
+    border: 'none',
+    color: 'white',
+    borderRadius: '50%',
+    width: '32px',
+    height: '32px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    cursor: 'pointer',
+    transition: 'background 0.3s ease',
+    zIndex: 10,
+  },
+  prevButton: {
+    left: '8px',
+  },
+  nextButton: {
+    right: '8px',
   },
   singleImageContainer: {
     position: 'relative',

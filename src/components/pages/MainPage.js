@@ -25,7 +25,7 @@ const Hero = () => {
             Hi, I'm <span style={styles.heroName}>Betül Nur Yıldırım</span>
           </h1>
           <p style={styles.tagline}>
-           AI & Data Science Enthusiast/Explorer | Full Stack Developer in Progress
+           AI & Data Science Explorer | Full Stack Developer in Progress
           </p>
           <p style={styles.description}>
             I am passionate about identifying hidden problems and building end-to-end solutions.
@@ -142,11 +142,11 @@ const Cards = () => {
     },
     {
       title: 'Blog',
-      description: 'Hackathons, contests, and achievements',
+      description: 'Sharing what I learn, as I learn it. A space for notes on AI, problem-solving, and continuous growth in tech. Content is on the way.',
       icon: Heart,
       gradient: 'linear-gradient(135deg, #f59e0b, #f97316)',
       image: null,
-      path: "/competitions"
+      path: "/blog"
     }
   ];
  
@@ -187,7 +187,7 @@ const Contact = () => {
         <p style={styles.contactText}>
           I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
         </p>
-        <a href="betulbny@gmail.com" style={styles.contactBtn}>
+        <a href="mailto:betulbny@gmail.com" style={styles.contactBtn}>
           Get In Touch
         </a>
       </div>
