@@ -1,22 +1,35 @@
 {
   "files": {
     "main.css": "/Portfolio-website/static/css/main.e6c13ad2.css",
-    "main.js": "/Portfolio-website/static/js/main.bcad9cce.js",
+    "main.js": "/Portfolio-website/static/js/main.f03d4d2a.js",
+    "static/media/kursadUAV.mp4": "/Portfolio-website/static/media/kursadUAV.aebdb2a6cf863f831a96.mp4",
     "static/media/skin_cancer.mp4": "/Portfolio-website/static/media/skin_cancer.c76bd3debfdd433633eb.mp4",
+    "static/media/aytech2.jpeg": "/Portfolio-website/static/media/aytech2.466f7c747056da6b211b.jpeg",
     "static/media/library.jpg": "/Portfolio-website/static/media/library.c3264e9b972965a6fd46.jpg",
     "static/media/roma.jpeg": "/Portfolio-website/static/media/roma.c5cfbfb3e4173297ce8c.jpeg",
+    "static/media/sff1.jpg": "/Portfolio-website/static/media/sff1.9795227873255bee7008.jpg",
+    "static/media/hepsi1.jpeg": "/Portfolio-website/static/media/hepsi1.3e3e8b107a77d0aac1a9.jpeg",
+    "static/media/dl1.jpeg": "/Portfolio-website/static/media/dl1.7e38b7cfae0b44c44d2f.jpeg",
+    "static/media/kursadpos.jpg": "/Portfolio-website/static/media/kursadpos.7f2d1ce5a3e5a8befa0b.jpg",
     "static/media/rom.jpg": "/Portfolio-website/static/media/rom.a251a92bb8937848deb3.jpg",
+    "static/media/dl3.jpeg": "/Portfolio-website/static/media/dl3.bc6834dcb35c1e9d3076.jpeg",
     "static/media/space_success_rate.jpg": "/Portfolio-website/static/media/space_success_rate.4f2aca33b3511e3e786f.jpg",
     "static/media/garbage_class.jpg": "/Portfolio-website/static/media/garbage_class.6b032fd27c1bd6d9bdf2.jpg",
+    "static/media/aytc.jpg": "/Portfolio-website/static/media/aytc.b4194e83ce1a53763717.jpg",
+    "static/media/hepsi2.jpeg": "/Portfolio-website/static/media/hepsi2.df3fb552842419e8a1de.jpeg",
+    "static/media/sff2.jpg": "/Portfolio-website/static/media/sff2.5316160365494f1f0276.jpg",
     "static/media/huawei.jpg": "/Portfolio-website/static/media/huawei.56391ac78ff2ca896147.jpg",
     "static/media/skinPoster.jpg": "/Portfolio-website/static/media/skinPoster.b7e91e982a6b391c1ea9.jpg",
+    "static/media/dl2.jpeg": "/Portfolio-website/static/media/dl2.09db3f86fa715ca6d65d.jpeg",
+    "static/media/da.jpg": "/Portfolio-website/static/media/da.64c3c69bc1d90ac6c9bc.jpg",
     "static/media/caretta.jpg": "/Portfolio-website/static/media/caretta.c2aa4558c1c0495db4f9.jpg",
+    "static/media/wie.jpg": "/Portfolio-website/static/media/wie.214a208b0dd967a94f77.jpg",
     "index.html": "/Portfolio-website/index.html",
     "main.e6c13ad2.css.map": "/Portfolio-website/static/css/main.e6c13ad2.css.map",
-    "main.bcad9cce.js.map": "/Portfolio-website/static/js/main.bcad9cce.js.map"
+    "main.f03d4d2a.js.map": "/Portfolio-website/static/js/main.f03d4d2a.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.bcad9cce.js"
+    "static/js/main.f03d4d2a.js"
   ]
 }
