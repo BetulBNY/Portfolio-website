@@ -9,3 +9,5 @@ git push origin main
 
 # 4. Deploy to live site
 npm run deploy
+
+# npm start

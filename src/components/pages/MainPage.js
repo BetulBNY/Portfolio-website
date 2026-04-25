@@ -25,12 +25,13 @@ const Hero = () => {
             Hi, I'm <span style={styles.heroName}>Betül Nur Yıldırım</span>
           </h1>
           <p style={styles.tagline}>
-           AI & Data Science Explorer | Full Stack Developer in Progress
+           Data-focused Software Engineer | Data Engineering Specialist
           </p>
           <p style={styles.description}>
-            I am passionate about identifying hidden problems and building end-to-end solutions.
-            I develop my projects from scratch, covering both AI and full-stack parts. 
-            My main focus is on Data Science and AI, and I am currently exploring LLMs.
+          I am a Data-focused Software Engineer with strong experience in databases, data processing, and backend systems. 
+          Experienced in building scalable data pipelines, working with SQL and Python for data transformation, and deploying 
+          cloud-based solutions. I am passionate about data engineering, data warehousing, and building reliable data 
+          infrastructure. 
             </p>
  
           <div style={styles.socialLinks}>
@@ -54,20 +55,28 @@ const Hero = () => {
 };
  
 // Skills Component
+
 const Skills = () => {
-  const skills = ['Data Analysis', 
-'Feature Engineering', 'Machine Learning', 'Deep Learning', 'Computer Vision', 'Model Deployment/ API integration',
- 'Python', 'Java', 'JavaScript (React, Node.js)','TensorFlow', 'Keras',' Scikit-Learn', 'Numpy', 'Pandas', 'OpenCV', 'Matplotlib', 
-'Seaborn', 'Plotly', 'NLTK','Agile', 'UML', 'Git', 'Docker', 'MySql', 'MongoDB'];
- 
-  return (
+  const skillGroups = [
+    { title: 'Data Engineering & ETL', skills: ['Star & Snowflake Schema','Medallion Architecture (Bronze/Silver/Gold)', 'Apache Airflow', 'Pentaho', 'ELT/ETL Pipelines', 'PySpark(Basics)'] },
+    { title: 'Databases & Storage', skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Google BigQuery', 'Cloud Storage'] },
+    { title: 'Programming & Frameworks', skills: ['Python', 'SQL (CTEs, Window Functions)', 'Java (Spring Boot)', 'JavaScript', 'FastAPI'] },
+    { title: 'Cloud & DevOps', skills: ['Docker', 'AWS (EC2, S3)', 'GitHub/GitLab CI/CD', 'Linux Fundamentals', 'Git'] },
+    { title: 'AI & ML', skills: ['TensorFlow', 'Scikit-learn', 'OpenCV', 'Data Analysis', 'Feature Engineering', 'EDA','Basic LLM concepts (LangChain, RAG, Multi-Agent Systems)' ] }
+  ];
+
+
+return (
     <section style={styles.skills}>
       <div style={styles.skillsContainer}>
-        <h2 style={styles.sectionTitle}>Technical Skills</h2>
-        <div style={styles.skillsGrid}>
-          {skills.map((skill) => (
-            <div key={skill} style={styles.skillTag}>
-              {skill}
+        <h2 style={styles.sectionTitle}>Technical Stack</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
+          {skillGroups.map((group) => (
+            <div key={group.title} style={{ background: 'rgba(216, 185, 195, 0.05)', padding: '1.5rem', borderRadius: '15px', border: '1px solid rgba(216, 185, 195, 0.1)' }}>
+              <h3 style={{ color: '#D8B9C3', marginBottom: '1rem', fontSize: '1.1rem' }}>{group.title}</h3>
+              <div style={styles.skillsGrid}>
+                {group.skills.map(skill => <div key={skill} style={styles.skillTag}>{skill}</div>)}
+              </div>
             </div>
           ))}
         </div>
@@ -84,9 +93,9 @@ const Education = () => {
     {
       name: 'İstanbul Aydın University',
       degree: 'Bachelor of Software Engineering ',
-      gpa: 'GPA: 3.62/4.00 - 2nd in department - High Honor',
+      gpa: 'GPA: 3.62/4.00 - 3rd in department - High Honor',
       period: '2020 - 2025',
-      description: 'Focused on AI, Machine Learning, and Software Development'
+      description: 'Focused on Data Engineering, AI, and Software Development'
     },
     {
       name: 'John Von Neumann University',
@@ -364,7 +373,7 @@ const styles = {
     background: 'rgba(77, 76, 125, 0.2)',
   },
   skillsContainer: {
-    maxWidth: '1200px',
+    maxWidth: '1400px',
     margin: '0 auto',
   },
   sectionTitle: {

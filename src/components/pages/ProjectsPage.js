@@ -11,11 +11,71 @@ import dl1 from '../../assets/dl1.jpeg';
 import dl2 from '../../assets/dl2.jpeg';
 import dl3 from '../../assets/dl3.jpeg';
 import kursadpos from '../../assets/kursadpos.jpg';
+import architecture from '../../assets/architecture.jpg';
+import dashboard from '../../assets/dashboard.jpg';
+import airflow from '../../assets/airflow.jpg';
+import erdiagram from '../../assets/erdiagram.jpg';
+import dataflow1 from '../../assets/dataflow1.jpg';
+import data_architecture from '../../assets/data_architecture.png';
+import dataflow from '../../assets/dataflow.jpg';
+import data_integration from '../../assets/data_integration.png';
+import pentaho_workflow from '../../assets/pentaho_workflow.jpg';
+import datamodel3 from '../../assets/datamodel3.jpg';
+
 export default function ProjectsPage() {
  
   const projects = [
-    {
+      {
       id: 1,
+      title: 'Autonomous E-Commerce Data Engineering & Analytics Platform',
+      description: `Designed and implemented an end-to-end Data Engineering platform using Medallion Architecture and Kimball Star Schema.
+      Key features:
+      - Orchestrated production-like ELT pipelines with Apache Airflow.
+      - Automated data quality checks and incremental upsert (SCD 1-like) logic.
+      - Built a data simulator (Python, Faker) for continuous synthetic transactions.
+      - Integrated CI/CD pipelines (GitHub Actions) for SQL validation and Python linting.
+      - Visualized real-time logistics and sales insights via a Streamlit dashboard.
+
+        PROBLEMS SOLVED
+    ❌ Static data problem → ✔ Real-time simulated dynamic data pipeline
+    ❌ Manual pipeline execution → ✔ Fully automated Airflow orchestration
+    ❌ Reprocessing overhead → ✔ Incremental ELT (only new data processed)
+    ❌ Unstructured data layers → ✔ Structured Medallion Architecture
+    ❌ Manual dashboard updates → ✔ Git-based automated sync system
+    ❌ Data quality issues & incorrect reporting → ✔ Automated SQL Quality Gates (logical validation tests)`,
+      image: [architecture, dashboard, airflow, dataflow1, erdiagram],
+      technologies: ['Apache Airflow', 'PostgreSQL', 'Python', 'Docker', 'GitHub Actions', 'Streamlit', 'Medallion Architecture', 'Data Modeling', 'Data Warehousing'],
+      githubUrl: 'https://github.com/BetulBNY/ecommerce-data-lakehouse.git', 
+      liveUrl: "https://betul-ecommerce-dashboard.streamlit.app/",
+      date: 'March 2026 - Present'
+    },
+    {
+      id: 2,
+      title: 'SQL Data Warehouse Project (Medallion Architecture)',
+      description: `Built a multi-layered data warehouse in PostgreSQL. 
+      - Implemented Bronze, Silver, and Gold layers for data cleanliness and reliability.
+      - Developed Fact and Dimension tables based on Star Schema.
+      - Wrote highly optimized SQL queries (CTEs, Window Functions) for business intelligence reporting.`,
+      image: [data_architecture, dataflow, data_integration],
+      technologies: ['PostgreSQL', 'SQL', 'Medallion Architecture', 'Data Modeling', 'Data Warehousing'],
+      githubUrl: 'https://github.com/BetulBNY/sql-data-warehouse-project.git',
+      date: 'March 2026'
+    },
+    {
+      id: 3,
+      title: 'Sales ETL Pipeline with Pentaho',
+      description: `Developed scalable ETL pipelines using Pentaho Data Integration (Kettle).
+      - Automated data cleansing and normalization workflows.
+      - Implemented Incremental (Delta) load logic to optimize performance.
+      - Integrated diverse data sources into a centralized PostgreSQL target.`,
+      image: [pentaho_workflow, datamodel3],
+      technologies: ['Pentaho', 'PDI', 'SQL', 'PostgreSQL', 'ETL'],
+      githubUrl: 'https://github.com/BetulBNY/pentaho-sales-etl-pipeline.git',
+      date: 'February 2026'
+    },
+
+    {
+      id: 4,
       title: 'Custom Deep Learning Model Development App',
       description: 'A full-stack web application that allows users to design, train, evaluate, and deploy deep learning models through an entirely visual, no-code interface. Users can sign up and manage their own workspaces where they: Build neural network architectures visually, Configure hyperparameters and compile models, Upload datasets for training, Monitor performance metrics during training in real time, Validate models with separate test data, And finally, run predictions directly within the platform. This approach removes the need for programming skills, making it easier for non-technical users to experiment with AI, while still supporting advanced functionality for production-level inference.Implementation: The full-stack application is built around three distinct modules: - C++ Module (Deep Learning Logic): This core module implements deep learning functionality such as layer types, activation functions, loss functions, and more, following object-oriented principles and design patterns. The Crow framework is used for API handling, managing HTML requests, and establishing WebSocket connections with the frontend to transmit epoch results during training. Eigen library is leveraged for efficient vectorization, significantly enhancing performance. - Express.js Module (Authentication & Data Management): The backend is responsible for user authentication and data storage. It follows the MVC pattern, handling requests from the frontend, managing user sessions, and saving user data in a MongoDB database using the Mongoose library. - React.js Module (Frontend/UI): The frontend provides an intuitive, user-friendly interface for interacting with the system. Users can design, train, and test deep learning models seamlessly through the visual interface.',
       image: [dl1,dl2,dl3],
@@ -25,7 +85,7 @@ export default function ProjectsPage() {
       date: 'Jan 2025 - Present'
     },
     {
-      id: 2,
+      id: 5,
       title: 'UAV Control And Image Recognition',
       description: 'As a member of Aytech UAS – Kürşad 40, I took part in developing the autonomous mission system for the International Rotary Wing UAV Competition at Teknofest. Our team secured 3rd place among 29 finalists with a drone that successfully carried out the following tasks: Surveying the mission area using a downward-facing onboard camera. Identifying a blue hexagon and precisely releasing a red payload at its center. Detecting a red triangle, storing its position when encountered earlier, and later releasing a blue payload at its center. Completing the mission with an autonomous return-to-home and landing sequence. Key Contributions: Built the offboard control architecture using MAVSDK, enabling autonomous flight, payload handling, and mission logic. Developed real-time vision algorithms with OpenCV for accurate recognition of geometric targets (triangle & hexagon). Conducted extensive simulation trials in Gazebo to validate performance before hardware deployment. Deployed the mission software onto a Raspberry Pi connected to the onboard camera, achieving reliable operation in real-world tests.',
       video:kursadUAV,
@@ -36,7 +96,7 @@ export default function ProjectsPage() {
       date: 'March 2025'
     },
     {
-      id: 3,
+      id: 6,
       title: 'Skin Cancer Detection App',
       description: 'Skin cancer is one of the most common and deadly cancers worldwide, and early detection is critical for survival. This project developed an AI-powered application that combines image data and tabular patient information (such as age, gender, and lesion location) to provide a more accurate assessment. Users can upload images of their skin lesions, and the system analyzes both the visual and tabular data to generate a risk score. Designed to be accessible and affordable, the app promotes early detection and raises awareness about skin health',
       video: skinVideo,
@@ -47,7 +107,7 @@ export default function ProjectsPage() {
       date: 'May 2025'
     },
     {
-      id: 4,
+      id: 7,
       title: 'Library Management System',
       description: 'A full-featured library management system designed to handle book inventories, user accounts, and borrowing processes efficiently. The system provides role-based authentication (admin and user) and allows admins to manage books, authors, and categories, while users can browse, borrow, and return books.',
       image: libraryJ,
@@ -57,7 +117,7 @@ export default function ProjectsPage() {
       date: 'April 2024'
     },
  {
-  id: 5,
+  id: 8,
   title: 'Predicting the Success Rate of Space Mission',
   // description'ı " yerine ` ile başlatıp bitiriyoruz.
   description: `Overview: This project presents an end-to-end machine learning solution designed to predict the success or failure of a space mission prior to launch. Using a comprehensive dataset of all space missions from 1957 to the present, the project encompasses the entire data science workflow, including data cleaning, extensive feature engineering, handling class imbalance, and comparative analysis of multiple classification models. The project culminates in an optimized XGBoost model capable of predicting mission outcomes with over 92% accuracy.
@@ -77,7 +137,7 @@ export default function ProjectsPage() {
   date: 'September 2023'
 },
     {
-      id: 6,
+      id: 9,
       title: 'Garbage classsification',
       description: 'The rapid urbanization, growing population, and consumption-driven lifestyles have significantly contributed to environmental pollution worldwide. Efficient recycling has become crucial for both the global economy and climate balance. In this project, our goal is to automate the classification of solid waste—such as plastic, paper, glass, and metal—using computer vision techniques. By enabling machines to identify and sort waste, we aim to reduce human labor requirements and promote environmentally sustainable waste management practices.',
       image: garbageClass,
@@ -87,7 +147,7 @@ export default function ProjectsPage() {
       date: 'May 2024'
     },
     {
-      id: 7,
+      id: 10,
       title: 'Room Occupancy Prediction',
       description: 'This project presents a machine learning-based approach to accurately estimate the number of occupants in a room using non-intrusive, low-cost environmental sensors such as CO₂, temperature, illumination, sound, and motion. The system leverages supervised learning models including Random Forest and Support Vector Machine (SVM) to predict occupancy levels with high accuracy.',
       image: room,
