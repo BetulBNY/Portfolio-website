@@ -1,13 +1,21 @@
 {
   "files": {
     "main.css": "/Portfolio-website/static/css/main.e6c13ad2.css",
-    "main.js": "/Portfolio-website/static/js/main.f03d4d2a.js",
+    "main.js": "/Portfolio-website/static/js/main.a01d54d1.js",
     "static/media/kursadUAV.mp4": "/Portfolio-website/static/media/kursadUAV.aebdb2a6cf863f831a96.mp4",
     "static/media/skin_cancer.mp4": "/Portfolio-website/static/media/skin_cancer.c76bd3debfdd433633eb.mp4",
+    "static/media/data_architecture.png": "/Portfolio-website/static/media/data_architecture.4e388e1471707c8dc7f7.png",
+    "static/media/data_integration.png": "/Portfolio-website/static/media/data_integration.b75548cf04c9b43c7700.png",
+    "static/media/airflow.jpg": "/Portfolio-website/static/media/airflow.35b350ef652a73956bec.jpg",
+    "static/media/dataflow1.jpg": "/Portfolio-website/static/media/dataflow1.e9510fa13122c6efbfa3.jpg",
+    "static/media/dataflow.jpg": "/Portfolio-website/static/media/dataflow.1b25a9b24321141cd2ef.jpg",
+    "static/media/erdiagram.jpg": "/Portfolio-website/static/media/erdiagram.a8f07b50df48bd2ff675.jpg",
     "static/media/aytech2.jpeg": "/Portfolio-website/static/media/aytech2.466f7c747056da6b211b.jpeg",
     "static/media/library.jpg": "/Portfolio-website/static/media/library.c3264e9b972965a6fd46.jpg",
     "static/media/roma.jpeg": "/Portfolio-website/static/media/roma.c5cfbfb3e4173297ce8c.jpeg",
+    "static/media/dashboard.jpg": "/Portfolio-website/static/media/dashboard.6bc71a64336203ffe558.jpg",
     "static/media/sff1.jpg": "/Portfolio-website/static/media/sff1.9795227873255bee7008.jpg",
+    "static/media/architecture.jpg": "/Portfolio-website/static/media/architecture.a878ae5e39d59a45fefd.jpg",
     "static/media/hepsi1.jpeg": "/Portfolio-website/static/media/hepsi1.3e3e8b107a77d0aac1a9.jpeg",
     "static/media/dl1.jpeg": "/Portfolio-website/static/media/dl1.7e38b7cfae0b44c44d2f.jpeg",
     "static/media/kursadpos.jpg": "/Portfolio-website/static/media/kursadpos.7f2d1ce5a3e5a8befa0b.jpg",
@@ -17,6 +25,8 @@
     "static/media/garbage_class.jpg": "/Portfolio-website/static/media/garbage_class.6b032fd27c1bd6d9bdf2.jpg",
     "static/media/aytc.jpg": "/Portfolio-website/static/media/aytc.b4194e83ce1a53763717.jpg",
     "static/media/hepsi2.jpeg": "/Portfolio-website/static/media/hepsi2.df3fb552842419e8a1de.jpeg",
+    "static/media/pentaho_workflow.jpg": "/Portfolio-website/static/media/pentaho_workflow.5532140a23212c5e334f.jpg",
+    "static/media/datamodel3.jpg": "/Portfolio-website/static/media/datamodel3.de2016d3d8e64fa2fe87.jpg",
     "static/media/sff2.jpg": "/Portfolio-website/static/media/sff2.5316160365494f1f0276.jpg",
     "static/media/huawei.jpg": "/Portfolio-website/static/media/huawei.56391ac78ff2ca896147.jpg",
     "static/media/skinPoster.jpg": "/Portfolio-website/static/media/skinPoster.b7e91e982a6b391c1ea9.jpg",
@@ -26,10 +36,10 @@
     "static/media/wie.jpg": "/Portfolio-website/static/media/wie.214a208b0dd967a94f77.jpg",
     "index.html": "/Portfolio-website/index.html",
     "main.e6c13ad2.css.map": "/Portfolio-website/static/css/main.e6c13ad2.css.map",
-    "main.f03d4d2a.js.map": "/Portfolio-website/static/js/main.f03d4d2a.js.map"
+    "main.a01d54d1.js.map": "/Portfolio-website/static/js/main.a01d54d1.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.f03d4d2a.js"
+    "static/js/main.a01d54d1.js"
   ]
 }
