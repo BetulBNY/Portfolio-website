@@ -25,14 +25,15 @@ const Hero = () => {
             Hi, I'm <span style={styles.heroName}>Betül Nur Yıldırım</span>
           </h1>
           <p style={styles.tagline}>
-           Data-focused Software Engineer | Data Engineering Specialist
+           Data-focused Software Engineer | Data Scientist
           </p>
           <p style={styles.description}>
-          I am a Data-focused Software Engineer with strong experience in databases, data processing, and backend systems. 
-          Experienced in building scalable data pipelines, working with SQL and Python for data transformation, and deploying 
-          cloud-based solutions. I am passionate about data engineering, data warehousing, and building reliable data 
-          infrastructure. 
-            </p>
+          I am a Data-focused Software Engineer with strong experience in data analysis, machine learning, 
+          and building AI-driven applications. Experienced in working with Python and SQL for data exploration, 
+          feature engineering, and developing machine learning models. I enjoy deploying AI solutions and 
+          building intelligent, data-driven applications. I am passionate about applied machine learning, 
+          AI systems, and delivering real-world impact through data.
+          </p>
  
           <div style={styles.socialLinks}>
             <a href="https://github.com/BetulBNY" target="_blank" rel="noopener noreferrer" style={styles.socialLink}>
@@ -58,11 +59,11 @@ const Hero = () => {
 
 const Skills = () => {
   const skillGroups = [
-    { title: 'Data Engineering & ETL', skills: ['Star & Snowflake Schema','Medallion Architecture (Bronze/Silver/Gold)', 'Apache Airflow', 'Pentaho', 'ELT/ETL Pipelines', 'PySpark(Basics)'] },
-    { title: 'Databases & Storage', skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Google BigQuery', 'Cloud Storage'] },
-    { title: 'Programming & Frameworks', skills: ['Python', 'SQL (CTEs, Window Functions)', 'Java (Spring Boot)', 'JavaScript', 'FastAPI'] },
-    { title: 'Cloud & DevOps', skills: ['Docker', 'AWS (EC2, S3)', 'GitHub/GitLab CI/CD', 'Linux Fundamentals', 'Git'] },
-    { title: 'AI & ML', skills: ['TensorFlow', 'Scikit-learn', 'OpenCV', 'Data Analysis', 'Feature Engineering', 'EDA','Basic LLM concepts (LangChain, RAG, Multi-Agent Systems)' ] }
+    { title: 'AI & Machine Learning', skills: ['Machine Learning', 'Deep Learning', 'Computer Vision', 'NLP', 'Exploratory Data Analysis (EDA)', 'Feature Engineering', 'TensorFlow', 'Scikit-learn', 'OpenCV']  },
+    {title: 'LLM & Generative AI', skills: ['LangChain', 'Prompt Engineering', 'RAG', 'Vector Databases (FAISS, ChromaDB)']},
+    { title: 'Programming & Frameworks', skills: ['Python', 'SQL', 'FastAPI', 'Flask', 'Java (Spring Boot)', 'JavaScript', 'Node.js'] },
+    { title: 'Cloud & DevOps', skills: ['Docker', 'AWS (EC2, S3)', 'GitHub/GitLab CI/CD'] },
+    { title: 'Databases & Data Processing', skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Data Modeling', 'Data Warehousing Concepts', 'ETL/ELT Pipelines', 'Airflow'] }
   ];
 
 
@@ -95,7 +96,7 @@ const Education = () => {
       degree: 'Bachelor of Software Engineering ',
       gpa: 'GPA: 3.62/4.00 - 3rd in department - High Honor',
       period: '2020 - 2025',
-      description: 'Focused on Data Engineering, AI, and Software Development'
+      description: 'Focused on Data Science, AI, and Software Development'
     },
     {
       name: 'John Von Neumann University',
